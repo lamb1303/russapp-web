@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap");
+
+html,
+body,
+#root,
+canvas {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: radial-gradient(circle, rgb(9, 136, 168) 0%, rgba(23, 88, 43, 0.828) 100%);
+}
+span{
+  position: absolute;
+  bottom: 20px;
+  font-family: "Russo One", sans-serif;
+  left: 40px;
+  font-size: 2.1em;
+}
+
+h1 {
+  font-family: "Russo One", sans-serif;
+  position: absolute;
+  margin: 0;
+  font-size: 5.7em;
+  padding: 0;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1), 0.05em -0.03em 0 rgba(0, 0, 0, 1), 0.05em 0.005em 0 rgba(0, 0, 0, 1),
+    0em 0.08em 0 rgba(0, 0, 0, 1), 0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1),
+    -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+}
+
+@media screen and (min-width: 600px) {
+  .blur {
+    -webkit-animation: blur 2.9s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite alternate;
+    animation: blur 2.9s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite alternate;
+  }
+
+  @-webkit-keyframes blur {
+    0% {
+      -webkit-filter: blur(0.01);
+      filter: blur(0.01);
+    }
+    100% {
+      -webkit-filter: blur(12px) opacity(0%);
+      filter: blur(12px) opacity(0%);
+    }
+  }
+  @keyframes blur {
+    0% {
+      -webkit-filter: blur(0.01);
+      filter: blur(0.01);
+    }
+    100% {
+      -webkit-filter: blur(12px) opacity(0%);
+      filter: blur(12px) opacity(0%);
+    }
+  }
+
+  h1 {
+    top: 9vh;
+    left: 19vw;
+    font-size: 9em;
+  }
+}

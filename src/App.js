@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from 'react';
+import { Canvas } from 'react-three-fiber'
+import Controls from './components/Controls/Controls'
+import Rocket from './components/Rocket/Rocket'
+import * as THREE from 'three'
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1 className="blur">Coming soon</h1>
+      <span className="blur">Scroll to discover!</span>
+      <Canvas
+        camera={{ position: [9, 6, 18] }} onCreated={({ gl }) => {
+          gl.shadowMap.enabled = true
+          gl.shadowMap.type = THREE.PCFShadowMap
+        }}>
+        <Suspense fallback={null}>
+          <Controls />
+          <Rocket />
+        </Suspense>
+      </Canvas>
+    </>
   );
 }
 
