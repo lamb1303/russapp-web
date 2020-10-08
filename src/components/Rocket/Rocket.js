@@ -7,11 +7,11 @@ const Rocket = () => {
     useEffect(() => {
       new GLTFLoader().load('/scene.gltf', setModel)
     }, [])
-    return model ?
+  return model ?
+      
       <>
-        <fog attach="fog" args={["white", 6, 60]} />
-        <ambientLight intensity={0.5} />
-        <spotLight position={[40, 10, 35]} penumbra={1} castShadow />
+        <fog attach="fog" args={["white", 3, 90]} />
+        <spotLight intensity={0.5} angle={0.9} position={[20, 9, 95]} penumbra={1} castShadow />
         <primitive object={model.scene} /> </> : null
 }
   

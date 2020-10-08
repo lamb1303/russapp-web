@@ -16,7 +16,9 @@ const Controls = () => {
       maxPolarAngle={Math.PI / 2}
       minPolarAngle={Math.PI / 3}
       dampingFactor={0.1}
-      rotateSpeed={0.5} />
+      maxDistance={35}
+      minDistance={3}
+      rotateSpeed={0.6} />
 }
   
 export default Controls
